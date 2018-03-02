@@ -1,0 +1,19 @@
+---
+title: "msft"
+author: "Alex Barnes"
+date: "February 17, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(dplyr)
+```
+
+```{r}
+msft = read.csv('file:///D:/OneDrive/Documents/investment/msft.csv')
+head(msft)
+ggplot(msft, aes(x = date, y = close))+
+  geom_line()
+```
