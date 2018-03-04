@@ -12,8 +12,7 @@ library(dplyr)
 ```
 
 ```{r}
-msft = read.csv('file:///D:/OneDrive/Documents/investment/msft.csv')
-head(msft)
+msft = read.csv(choose.files())
 ggplot(msft, aes(x = date, y = close))+
-  geom_line()
+  geom_point()
 ```
